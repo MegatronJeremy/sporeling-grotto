@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Sporeling Grotto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <section id="scene">
+    <canvas id="cv" width="320" height="180"></canvas>
+    <div id="hud">
+      <div id="bank"><span id="spores">0</span> <small>spores</small></div>
+      <div id="rate">0 per second</div>
+    </div>
+    <div id="buffs"></div>
+    <button id="golden" aria-label="Golden spore" hidden></button>
+    <div id="toast" role="status"></div>
+    <div id="bar">
+      <button id="gift" hidden>Daily gift</button>
+      <button id="mute" aria-label="Toggle sound">Sound: on</button>
+      <button id="about-btn">About</button>
+    </div>
+  </section>
+  <section id="panel">
+    <nav id="tabs">
+      <button data-tab="grow" class="on">Grow</button>
+      <button data-tab="upgrades">Upgrades</button>
+      <button data-tab="bloom">Bloom</button>
+      <button data-tab="trophies">Trophies</button>
+    </nav>
+    <div id="buyqty"><span>Buy:</span><button data-q="1" class="on">1</button><button data-q="10">10</button><button data-q="max">Max</button></div>
+    <div id="list"></div>
+  </section>
+</div>
+<div id="modal" hidden><div id="modal-box"><div id="modal-body"></div><button id="modal-close">OK</button></div></div>
+<script src="logic.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
